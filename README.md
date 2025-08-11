@@ -1,5 +1,5 @@
 # ResQ-CodeSquad
-ResQ is a real-time animal welfare and rescue platform that connects people with nearby responders, enabling quick reporting of distressed animals, live location sharing, and efficient case management to ensure faster help and safe recoveries.
+# ResQ is a real-time animal welfare and rescue platform that connects people with nearby responders, enabling quick reporting of distressed animals, live location sharing, and efficient case management to ensure faster help and safe recoveries.
 
 Team Members:
 Vrisha Bhandari
