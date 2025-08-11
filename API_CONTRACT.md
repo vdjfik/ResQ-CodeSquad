@@ -1,23 +1,23 @@
 1. Get All Rescue Reports:
-Feature: Retrieve all active emergency reports.
+Feature: Retrieve all active rescue reports.
 HTTP Method: GET
 Endpoint Path: /api/reports
-Description: Returns a list of all emergency reports in the system.
+Description: Returns a list of all rescue reports in the system.
 
 2. Create a New Rescue Report:
-Feature: Allow a user to submit a new emergency report.
+Feature: Allow a user to submit a new rescue report.
 HTTP Method: POST
 Endpoint Path: /api/reports
-Description: Creates and stores a new emergency report in the system.
+Description: Creates and stores a new rescue report in the system.
 
 3. Get a Single Rescue Report:
-Feature: Retrieve details of a specific emergency report.
+Feature: Retrieve details of a specific rescue report.
 HTTP Method: GET
 Endpoint Path: /api/reports/{id}
 Description: Fetches the details of a report using its unique ID.
 
 5. Delete Rescue Report:
-Feature: Remove an emergency report from the system.
+Feature: Remove an rescue report from the system.
 HTTP Method: DELETE
 Endpoint Path: /api/reports/{id}
 Description: Deletes the report with the given ID.
