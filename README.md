@@ -1,15 +1,14 @@
-# ResQ-CodeSquad
-# ResQ is a real-time animal welfare and rescue platform that connects people with nearby responders, enabling quick reporting of distressed animals, live location sharing, and efficient case management to ensure faster help and safe recoveries.
+# ResQ - Backend (PetAPI_Backend)
 
-Team Members:
-Vrisha Bhandari
-Sejal Parsekar
-Swati Rekam
-Surabhi Talawadekar
-Prathamesh Shirodkar
+## Project Overview
+ResQ backend provides a simple in-memory REST API for pet management (create, read, update, delete). Built with Node.js and Express. Swagger UI is included for interactive API docs.
 
-CODESQUAD
-Frontend: TBD
-Backend: TBD
-Database: TBD
-Other Tools & Services: TBD
+## Tech Stack
+- Node.js
+- Express
+- swagger-jsdoc + swagger-ui-express
+
+## Setup & Run (local)
+1. Open terminal and go to project folder:
+   ```bash
+   cd /path/to/PetAPI_Backend
