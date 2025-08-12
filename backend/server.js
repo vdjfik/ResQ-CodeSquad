@@ -1,15 +1,32 @@
 const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const swaggerJsdoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
+const routes = require('./routes');
+
 const app = express();
-const port = 3000;
+app.use(cors());
+app.use(bodyParser.json());
 
-// Middleware to parse JSON
-app.use(express.json());
+// Swagger setup
+const swaggerOptions = {
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'ResQ API',
+      version: '1.0.0',
+      description: 'API documentation for ResQ backend',
+    },
+  },
+  apis: ['./routes.js'], // This must be correct
+};
+const swaggerSpec = swaggerJsdoc(swaggerOptions);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-// Test route
-app.get('/', (req, res) => {
-  res.send('Animal Adoption Backend is running!');
-});
+// Routes
+app.use('/api', routes);
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+// Start server
+const PORT = 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
