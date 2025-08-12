@@ -4,10 +4,10 @@
 ResQ backend provides a simple in-memory REST API for pet management (create, read, update, delete). Built with Node.js and Express. Swagger UI is included for interactive API docs.
 
 # Team-CodeSquad
--Vrisha Bhandari      (Team lead) (https://github.com/vdjfik)
--Sejal Parsekar       (member)    (https://github.com/SejalParsekar)
--Surabhi Talawadekar  (member)    (https://github.com/hackmezilla)
--Swati Rekam          (member)    (https://github.com/heyy-siri)
+-Vrisha Bhandari      (Team lead) (https://github.com/vdjfik)         
+-Sejal Parsekar       (member)    (https://github.com/SejalParsekar)         
+-Surabhi Talawadekar  (member)    (https://github.com/hackmezilla)         
+-Swati Rekam          (member)    (https://github.com/heyy-siri)         
 -Prathamesh Shirodkar (member)    (https://github.com/prathameshshirodkar12)
 
 
