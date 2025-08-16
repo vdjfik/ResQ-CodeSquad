@@ -29,4 +29,9 @@ app.use('/api', routes);
 
 // Start server
 const PORT = 3000;
+app.get('/api/health', (req, res) => {
+  res.json({ status: "Backend is working!" });
+});
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
