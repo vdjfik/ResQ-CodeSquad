@@ -1,16 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from "react";
 
-export default function PetForm({ onAdd }) {
-  const [name, setName] = useState('');
-  const [type, setType] = useState('');
-  const [age, setAge] = useState('');
+export default function PetForm({ onAdd, onUpdate, editingPet }) {
+  const [name, setName] = useState("");
+  const [type, setType] = useState("");
+  const [age, setAge] = useState("");
+
+  useEffect(() => {
+    if (editingPet) {
+      setName(editingPet.name);
+      setType(editingPet.type);
+      setAge(editingPet.age);
+    }
+  }, [editingPet]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAdd({ name, type, age });
-    setName('');
-    setType('');
-    setAge('');
+    if (editingPet) {
+      onUpdate({ ...editingPet, name, type, age });
+    } else {
+      onAdd({ name, type, age });
+    }
+    setName("");
+    setType("");
+    setAge("");
   };
 
   return (
@@ -36,7 +48,9 @@ export default function PetForm({ onAdd }) {
         className="border p-1 mr-2"
         required
       />
-      <button className="bg-blue-500 text-white px-2 py-1 rounded">Add Pet</button>
+      <button className="bg-blue-500 text-white px-2 py-1 rounded">
+        {editingPet ? "Update Pet" : "Add Pet"}
+      </button>
     </form>
   );
 }
