@@ -1,0 +1,80 @@
+/* General Page Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main App Container */
+.app {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+input {
+  padding: 8px;
+  margin: 10px 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 60%;
+}
+
+/* Buttons */
+button {
+  padding: 8px 14px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Button Colors */
+button:nth-of-type(1) {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button:nth-of-type(2) {
+  background-color: #2196F3;
+  color: white;
+}
+
+button:nth-of-type(3) {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Pet List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f9f9f9;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
