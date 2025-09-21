@@ -1,48 +1,43 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
 import Pets from "./components/Pets";
 
 function App() {
   return (
-    <div className="app">
-      {/* Header */}
-      <header
-        style={{
-          backgroundColor: "#4CAF50",
-          padding: "20px",
-          textAlign: "center",
-        }}
-      >
-        <h1 style={{ color: "white", margin: 0 }}>ResQ - Pet Adoption</h1>
-      </header>
+    <Router>
+      <div className="app">
+        {/* Header with Navigation */}
+        <header className="header">
+          <h1>ResQ - Pet Adoption</h1>
 
-      {/* Main Section */}
-      <main
-        style={{
-          padding: "20px",
-          textAlign: "center",
-          color: "black", // ✅ ensures visible text in main
-        }}
-      >
-        <h2>Welcome to ResQ!</h2>
-        <p>Find your perfect furry friend and give them a loving home.</p>
+          {/* Navigation Links */}
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/pets">Pets</Link>
+            <Link to="/signup">Sign Up</Link>
+            <Link to="/signin">Sign In</Link>
+          </nav>
+        </header>
 
-        {/* Pets Component */}
-        <Pets />
-      </main>
+        {/* Main Section */}
+        <main className="main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/pets" element={<Pets />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/signin" element={<SignIn />} />
+          </Routes>
+        </main>
 
-      {/* Footer */}
-      <footer
-        style={{
-          backgroundColor: "#333",
-          padding: "10px",
-          color: "white",
-          textAlign: "center",
-          marginTop: "20px",
-        }}
-      >
-        &copy; 2025 ResQ - All Rights Reserved
-      </footer>
-    </div>
+        {/* Footer */}
+        <footer className="footer">
+          &copy; 2025 ResQ - All Rights Reserved
+        </footer>
+      </div>
+    </Router>
   );
 }
 
